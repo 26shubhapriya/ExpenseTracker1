@@ -1,5 +1,6 @@
 import Expenses from "./components/Expenses/Expenses";
 import React from "react";
+import NewExpense from "./components/NewExpense/NewExpense";
 
 const App = () => {
   const expenses = [
@@ -32,19 +33,19 @@ const App = () => {
       locationOfExpenditure: "mumbai"
     },
   ];
-return React.createElement(
-  'div', 
-  {},
-  React.createElement('h2', {}, "Lets's get started!"),
-  React.createElement(Expenses,{expenses:expenses})
-  );
-}
-//   return (
-//     <div>
-//       <h2>Lets's get started!</h2>
-//       <Expenses expenses={expenses} />
-//     </div>
+// return React.createElement(
+//   'div', 
+//   {},
+//   React.createElement('h2', {}, "Lets's get started!"),
+//   React.createElement(Expenses,{expenses:expenses})
 //   );
 // }
+  return (
+    <div>
+      <NewExpense />
+      <Expenses expenses={expenses} />
+    </div>
+  );
+}
 
 export default App;
